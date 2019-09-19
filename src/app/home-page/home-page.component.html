@@ -1,0 +1,26 @@
+<div class="container"
+     [formGroup]="inputSearchForm">
+       <img class="logo"
+            src="assets/images/logo.png">
+       <mat-icon class="position-search-icon">search</mat-icon>
+       <input type="text"
+              class="search-box"
+              placeholder="Search movies..."
+              formControlName="searchBoxInput">
+       <ng-container *ngIf="showLogoAndText">
+              <img src="assets/images/illustration-empty-state-small.png"
+                   class="center">
+              <p class="text-center text-description">Don't know what to search?</p>
+              <p class="text-center offer-description">Here's an offer you can't refuse</p>
+       </ng-container>
+       <ng-container *ngIf="showMovieNotFoundMessage">
+              <p class="text-center movie-not-found">Movie not found!</p>
+       </ng-container>
+       <div class="flex-container">
+              <ng-container *ngIf="movieResponse">
+                     <ng-container *ngFor="let movie of movieResponse.Search">
+                            <app-poster [movieDetail]="movie"></app-poster>
+                     </ng-container>
+              </ng-container>
+       </div>
+</div>

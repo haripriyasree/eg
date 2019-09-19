@@ -1,0 +1,18 @@
+<ng-container *ngIf="movieDetail">
+  <div (mouseenter)="showOverLay()"
+       (mouseleave)="hideOverLay()"
+       (click)="currentMovieCard()">
+    <div class="wrapper">
+      <div *ngIf="movieDetail.Poster != 'N/A'">
+        <img src="{{movieDetail.Poster}}"
+             height="200px"
+             width="200px">
+      </div>
+      <div [ngClass]="cardHoverEffect === false ? 'hideOverLay' : 'showOverLay'">
+        <div class="wrapper-inner">
+          <p class="wrapper-movie-title">{{movieDetail.Title}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

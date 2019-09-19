@@ -1,0 +1,70 @@
+<div class="container">
+  <img class="logo"
+       src="assets/images/logo.png">
+  <mat-icon class="custom-icon"
+            (click)="navigateToHomePage()">keyboard_backspace</mat-icon>
+  <ng-container *ngIf="movieDetail">
+    <div class="movie-information">
+      <div>
+        <img src="{{movieDetail.Poster}}"
+             class="pull-right align-image">
+      </div>
+      <p class="runtime">
+        <span>{{movieDetail.Runtime}}</span>
+        <span class="first-dot">.</span>
+        <span>{{movieDetail.Year}}</span>
+        <span class="second-dot">.</span>
+        <span class="rated">{{movieDetail.Rated}}</span>
+      </p>
+      <div class="row">
+        <div class="col-xs-6">
+          <p class="movie-title">{{movieDetail.Title}}</p>
+          <div class="button-section">
+            <div class="imdb-border">
+              <div class="imdb">
+                <span class="imdb-logo">
+                  <img src="assets/images/download.svg"
+                       alt="imdb-logo">
+                </span>
+                <span class="imdb-rating">{{movieDetail.imdbRating}}/10</span>
+              </div>
+            </div>
+            <div class="rotten-border">
+              <div class="rotten">
+                <span class="imdb-logo">
+                  <img src="assets/images/logo-rotten-tomato.svg"
+                       alt="imdb-logo">
+                </span>
+                <span class="rotten-percentage">{{movieDetail.Metascore}}%</span>
+              </div>
+            </div>
+          </div>
+          <p class="plot-title">Plot</p>
+          <p class="plot-description">{{movieDetail.Plot}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-9 footer">
+          <div class="col-xs-3 ">
+            <p class="footer-cast">Cast</p>
+            <ng-container *ngFor="let actor of actorsArray">
+              <p class="footer-content">{{actor}}</p>
+            </ng-container>
+          </div>
+          <div class="col-xs-3">
+            <p class="footer-cast">Genre</p>
+            <ng-container *ngFor="let genre of genreArray">
+              <p class="footer-content">{{genre}}</p>
+            </ng-container>
+          </div>
+          <div class="col-xs-3">
+            <p class="footer-cast">Director</p>
+            <ng-container *ngFor="let director of directorArray">
+              <p class="footer-content">{{director}}</p>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
