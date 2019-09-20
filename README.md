@@ -20,7 +20,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `./node_modules/.bin/cypress open` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
+For Recording Video Use below Command :
+`./node_modules/.bin/cypress run --spec "cypress/integration/examples/App_Test.js"` 
 
 ## Further help
 
