@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "cypress:open": "cypress open"
+    "cypress:report": "cypress run --reporter mocha-multi-reporters --reporter-options configFile=reporter-config.json",
+    "report": "start-server-and-test start http://localhost:4200/ cypress:report"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +23,8 @@
     "@angular/platform-browser": "~8.2.5",
     "@angular/platform-browser-dynamic": "~8.2.5",
     "@angular/router": "~8.2.5",
+    "@types/mocha": "^5.2.0",
+    "request": "^2.88.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
@@ -43,7 +46,11 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.23.1",
+    "mocha-multi-reporters": "^1.1.7",
     "protractor": "~5.4.0",
+    "start-server-and-test": "^1.10.2",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
