@@ -1,6 +1,6 @@
 const omdbApi = {
   API_KEY: '30ed262d',
-  BASE_URL: 'http://www.omdbapi.com/?apikey='
+  BASE_URL: 'https://www.omdbapi.com/?apikey='
 };
 
 export default omdbApi;
