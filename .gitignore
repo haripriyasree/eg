@@ -48,3 +48,4 @@ cypress/results/
 cypress/videos/
 cypress/results/**
 cypress/videos/**
+package-lock.json
