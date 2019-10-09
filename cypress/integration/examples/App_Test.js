@@ -10,7 +10,7 @@ describe('Movie App Test', function () {
    * Type in Keywords
    * Search results come back
   */
-  it('Search movie ', function () {
+  it('Search movie', function () {
     cy.wait(9000);
     if (cy.get('input')) {
       cy.get('input').type('Batman');
@@ -27,7 +27,7 @@ describe('Movie App Test', function () {
     // cy.wait(3000);
     cy.get('div > .flex-container').find('app-poster').first().click();
   })
-  it('Click on back button ', function () {
+  it('Click on back button', function () {
     cy.wait(9000);
     cy.get('.container').find('mat-icon').click();
   })
